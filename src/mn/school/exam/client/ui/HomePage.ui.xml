@@ -1,0 +1,73 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td align="right">
+					<img src="../exampro/mn.school.exam.png"></img>
+				</td>
+				<td>
+					<g:HTMLPanel ui:field="loginPanel">
+						<h2>Нэвтрэх хэсэг</h2>
+						<table>
+							<tr>
+								<td>
+									<g:Label>Нэвтрэх нэр:</g:Label>
+								</td>
+								<td>
+									<g:TextBox ui:field="txtUid" focus='true'></g:TextBox>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<g:Label>Нууц үг:</g:Label>
+								</td>
+								<td>
+									<g:PasswordTextBox ui:field="txtPwd">
+									</g:PasswordTextBox>
+								</td>
+							</tr>
+
+
+							<tr>
+								<td colspan="2" align="right">
+									<g:Button ui:field="loginButton">Нэвтрэх</g:Button>
+								</td>
+							</tr>
+
+						</table>
+						<br />
+						<g:Label ui:field="responseLabel">Нэвтрэх нэр, нууц үгээ оруулна уу</g:Label>
+					</g:HTMLPanel>
+				</td>
+
+			</tr>
+			<tr>
+				<td>
+
+				</td>
+				<td align="bottom">
+					<div>
+						<h2>Exam Pro програмын тухай</h2>
+						<p>
+							Exam Pro програм нь Их Засаг
+							их сургуулийн харъяа Мэдээллийн
+							Технологийн сургуулийн үйл ажиллагаанд хэрэглэгдэж байна.
+							Энэхүү
+							програм нь GWT дээр суурилан хийгдсэн.
+						</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+
+
+
+	</g:HTMLPanel>
+
+</ui:UiBinder> 

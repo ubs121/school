@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.state-draft {
+			color: blue;
+		}
+		
+		.state-accepted {
+			color: red;
+		}
+		
+		.toolbar {
+			background-color: silver;
+			width: 100%;
+		}
+		
+		.grid-header {
+			background-color: #115577;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<br />
+		<g:HorizontalSplitPanel ui:field="splitPanel"
+			splitPosition="30%" height="450px" width="950px">
+			<g:VerticalPanel ui:field="leftPanel">
+				<g:Tree ui:field="navTree">
+					<!-- Шүүлтүүр -->
+				</g:Tree>
+			</g:VerticalPanel>
+			<g:VerticalPanel ui:field="rightPanel">
+
+				<!-- Хэрэгслийн мөр -->
+				<g:HorizontalPanel addStyleNames="{style.toolbar}">
+					<g:HorizontalPanel>
+						<g:PushButton ui:field="find" height="20px" width="20px"
+							title="Элсэх хүсэлт хайх">
+							<g:upFace>
+								<img src="images/search.png" />
+							</g:upFace>
+						</g:PushButton>
+						<g:PushButton ui:field="delete" height="20px" width="20px"
+							title="Сонгосон бичлэгүүдийг устгах">
+							<g:upFace>
+								<img src="images/delete.png" />
+							</g:upFace>
+						</g:PushButton>
+					</g:HorizontalPanel>
+				</g:HorizontalPanel>
+
+				<!-- Хүснэгтийн толгой -->
+				<g:FlexTable ui:field="gridHeader" cellSpacing="5"
+					cellPadding="3" width="100%" addStyleNames="{style.grid-header}">
+				</g:FlexTable>
+
+				<!-- Хүснэгтийн бие -->
+				<g:FlexTable ui:field="requestList" cellSpacing="5"
+					cellPadding="3" width="100%">
+				</g:FlexTable>
+			</g:VerticalPanel>
+		</g:HorizontalSplitPanel>
+		<g:Label ui:field="statusBar">Бэлэн</g:Label>
+	</g:HTMLPanel>
+</ui:UiBinder> 

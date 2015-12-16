@@ -1,0 +1,268 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.tabPanel {
+			margin: 10px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<h2>
+			Элсэлтийн бүртгэл			
+		</h2>
+		<g:Hyperlink ui:field="logout" styleName="hyperlink">гарах</g:Hyperlink>
+		<g:Label ui:field="responseLabel"></g:Label>
+		<table>
+			<tr>
+				<td colspan="2">
+					<g:TabLayoutPanel ui:field="tabPanel" barUnit="PX"
+						barHeight="20" width="700px" height="320px" addStyleNames="{style.tabPanel}">
+						<g:tab>
+							<g:header>
+								<strong>Хувийн мэдээлэл</strong>
+							</g:header>
+							<g:HTMLPanel>
+								<table>
+									<tr>
+										<td>
+											<g:Label>Нэр</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="firstName"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="firstNameError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Эцгийн нэр</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="lastName"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="lastNameError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Хүйс</g:Label>
+										</td>
+										<td>
+											<g:ListBox ui:field="gender">
+											</g:ListBox>
+
+											<g:TextBox ui:field="genderText" readOnly="true"
+												visible="false"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="genderError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>И-мэйл</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="email" readOnly="true"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="emailError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Регистр№</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="regno"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="regnoError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Пасспорт№</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="pasno"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="pasnoError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Бүртгэгдсэн огноо</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="regDate" readOnly="true"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Төлөв</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="status" readOnly="true"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+
+								</table>
+							</g:HTMLPanel>
+						</g:tab>
+						<g:tab>
+							<g:header>
+								<strong>Элсэлтийн мэдээлэл</strong>
+							</g:header>
+							<g:HTMLPanel>
+								<table>
+									<tr>
+										<td>
+											<g:Label>Элсэх мэргэжил</g:Label>
+										</td>
+										<td>
+											<g:ListBox ui:field="prof">
+											</g:ListBox>
+											<g:TextBox ui:field="profText" readOnly="true"
+												visible="false"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>ЕШ хичээл</g:Label>
+										</td>
+										<td>
+											<g:ListBox ui:field="esubject">
+											</g:ListBox>
+											<g:TextBox ui:field="esubjectText" readOnly="true"
+												visible="false"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="esubjectError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>ЕШ оноо</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="escore"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="escoreError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Төлбөрийн ордер</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="payment_id"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Төгссөн сургууль</g:Label>
+										</td>
+										<td>
+											<g:SuggestBox ui:field="school">
+											</g:SuggestBox>
+											<g:TextBox ui:field="schoolText" visible="false"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Бүлэг</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="group"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Гэрчилгээний №</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="cert"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="certError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Төгссөн үнэлгээ</g:Label>
+										</td>
+										<td>
+											<g:TextBox ui:field="score"></g:TextBox>
+										</td>
+										<td>
+											<g:Label ui:field="scoreError" styleName="errorLabel"></g:Label>
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+											<g:Label>Иргэний харъяалал</g:Label>
+										</td>
+										<td>
+											<g:ListBox ui:field="country">
+											</g:ListBox>
+											<g:TextBox ui:field="countryText" readOnly="true"
+												visible="false"></g:TextBox>
+										</td>
+										<td>
+
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<g:Label>Муж/Аймаг</g:Label>
+										</td>
+										<td>
+											<g:ListBox ui:field="state">
+											</g:ListBox>
+											<g:TextBox ui:field="stateText" readOnly="true"
+												visible="false"></g:TextBox>
+										</td>
+										<td>
+										</td>
+									</tr>
+
+								</table>
+							</g:HTMLPanel>
+						</g:tab>
+					</g:TabLayoutPanel>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<g:Button ui:field="saveButton">Хадгалах</g:Button>
+
+				</td>
+				<td>
+					<g:Button ui:field="cancelButton" visible="false">Цуцлах</g:Button>
+
+				</td>
+				<td>
+					<g:Button ui:field="validateButton" visible="false">Батлах</g:Button>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

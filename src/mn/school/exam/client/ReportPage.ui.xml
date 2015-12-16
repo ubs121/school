@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTML>
+			<h2>&bull; Дүнгийн хуудас</h2>
+			<hr />
+		</g:HTML>
+		<h2>Шалгалтын онооны хуудас</h2>
+
+		<table>
+			<tr>
+				<td>Тестийн нэр:</td>
+				<td>
+					<g:Label ui:field="lblTestName"></g:Label>
+				</td>
+				<td>Шалгалт авсан огноо:</td>
+				<td>
+					<g:Label ui:field="lblTestDate"></g:Label>
+				</td>
+			</tr>
+			<tr>
+				<td>Нийт оноо:</td>
+				<td>
+					<g:Label ui:field="lblTestScore"></g:Label>
+				</td>
+				<td>Нийт хугацаа(мин):</td>
+				<td>
+					<g:Label ui:field="lblTestDuration"></g:Label>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<g:HTML ui:field="scoreSheet">
+					</g:HTML>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,104 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:p1="urn:import:com.extjs.gxt.ui.client.widget" xmlns:p2="urn:import:com.extjs.gxt.ui.client.widget.form">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel width="90em" height="50em">
+		<g:HTMLPanel>
+			<h2>&bull; Тест бэлтгэх</h2>
+			<hr />
+		</g:HTMLPanel>
+
+		<g:HorizontalSplitPanel splitPosition="20%">
+			<g:HTMLPanel>
+				<table cellspacing='0' cellpadding='0'>
+					<tr style="background-color:silver;">
+						<td height="20px">
+							<g:Button ui:field="btnAddTest" text="+" width="25px"
+								height="25px"></g:Button>
+						</td>
+						<td align="right" width="100%">
+							<g:Button ui:field="btnRemoveTest" text="-" width="25px"
+								height="25px"></g:Button>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<c:CellList ui:field='testList' width="100%" />
+						</td>
+					</tr>
+				</table>
+			</g:HTMLPanel>
+			<g:HTMLPanel>
+				<table cellspacing="10px">
+					<tr>
+						<td height="10">
+							<g:Label text="Тестийн нэр:" />
+						</td>
+						<td>
+							<g:TextBox ui:field="tbTestName" width="200px" />
+						</td>
+
+						<td height="10">
+							<g:Label text="Төрөл:" />
+						</td>
+						<td>
+							<g:ListBox ui:field="lstTestType" width="100px"
+								selectedIndex="1">
+								<g:item value="mn.school.exam">Ердийн</g:item>
+								<g:item value="final">Улирлын</g:item>
+								<g:item value="practice">Туршилтын</g:item>
+							</g:ListBox>
+						</td>
+						<td height="10">
+							<g:Label text="Тест өгөх групп:" />
+						</td>
+						<td>
+							<g:ListBox ui:field="lstTestGroup" width="100px" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<g:ListBox ui:field="lstTestStartType" width="160px">
+								<g:item>Гараар эхлүүлэх</g:item>
+								<g:item>Автоматаар эхлүүлэх</g:item>
+							</g:ListBox>
+						</td>
+						<td>
+							<g:Button text="Одоо эхлэх" ui:field="btnStartStop"
+								visible="true"></g:Button>
+							<g:HorizontalPanel ui:field="panelStartTime"
+								visible="false">
+								<p2:DateField width="100px" />
+								<p2:TimeField width="70px" />
+							</g:HorizontalPanel>
+						</td>
+						<td height="10" colspan="4" align="right">
+							<g:Button text="Асуулт нэмэх" ui:field="btnAddQuiz" />
+							<g:Button text="Асуулт устгах" ui:field="btnRemoveQuiz" />
+							<g:Button text="Хадгалах" ui:field="btnSave" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6" height="100%">
+							<c:CellTable ui:field="quizTable" pageSize='25'
+								height="100%" width="100%" />
+						</td>
+					</tr>
+					<tr>
+						<td height="10">
+							<g:Label text="Нийт 0 мин" ui:field="lblTestDuration" />
+						</td>
+						<td>
+							<g:Label text="Нийт 0 оноо" ui:field="lblTestScore" />
+						</td>
+
+					</tr>
+				</table>
+			</g:HTMLPanel>
+
+		</g:HorizontalSplitPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

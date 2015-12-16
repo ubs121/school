@@ -1,0 +1,10 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:x="urn:import:com.extjs.gxt.ui.client.widget.treepanel">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<x:TreePanel ui:field="topicTree"></x:TreePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

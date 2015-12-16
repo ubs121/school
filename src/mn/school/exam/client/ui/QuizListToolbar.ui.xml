@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HorizontalPanel>
+		<g:TextBox ui:field="searchBox" width="550px" height="17px"
+			title="Хайх утгаа оруулна уу. Дугаараар хайх бол #дугаар гэж бичнэ. Жнь: #110" />
+
+		<g:PushButton title="Асуулт хайх" width="25px" height="17px"
+			styleName="gwt-PushButton" ui:field="btnSearch">
+			<g:upFace>
+				<img src="../exampro/search.png" />
+			</g:upFace>
+		</g:PushButton>
+		<g:PushButton title="Шинэ асуулт нэмэх" width="25px"
+			height="17px" styleName="gwt-PushButton" ui:field="btnNewQuiz">
+			<g:upFace>
+				<img src="../exampro/new.png" />
+			</g:upFace>
+		</g:PushButton>
+		<g:PushButton title="Асуултыг хадгалах" width="25px"
+			height="17px" styleName="gwt-PushButton" ui:field="btnSaveQuiz">
+			<g:upFace>
+				<img src="../exampro/save.png" />
+			</g:upFace>
+		</g:PushButton>
+		<g:PushButton title="Асуулт устгах" width="25px" height="17px"
+			styleName="gwt-PushButton" ui:field="btnDeleteQuiz">
+			<g:upFace>
+				<img src="../exampro/delete.png" />
+			</g:upFace>
+		</g:PushButton>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

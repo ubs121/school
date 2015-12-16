@@ -1,0 +1,65 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:DialogBox ui:field="dlg" animationEnabled="true"
+		glassEnabled="true" modal="true" autoHide="false">
+		<g:caption>Элсэх хүсэлт хайх</g:caption>
+		<g:HTMLPanel>
+			<table>
+				<tr>
+					<td>
+						<g:Label>Нэр</g:Label>
+					</td>
+					<td>
+						<g:TextBox ui:field="name"></g:TextBox>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<g:Label>Эцгийн нэр</g:Label>
+					</td>
+					<td>
+						<g:TextBox ui:field="last_name"></g:TextBox>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<g:Label>И-мэйл</g:Label>
+					</td>
+					<td>
+						<g:TextBox ui:field="email"></g:TextBox>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<g:Label>Регистр№</g:Label>
+					</td>
+					<td>
+						<g:TextBox ui:field="regno"></g:TextBox>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<g:Label>ЕШ оноо (=,&lt;,&gt; үйлдлүүд хэрэглэж болно)</g:Label>
+					</td>
+					<td>
+						<g:TextBox ui:field="escore"></g:TextBox>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<g:Button ui:field="findButton">Хайх</g:Button>
+
+					</td>
+					<td>
+						<g:Button ui:field="cancelButton">Болих</g:Button>
+					</td>
+				</tr>
+			</table>
+		</g:HTMLPanel>
+	</g:DialogBox>
+</ui:UiBinder> 

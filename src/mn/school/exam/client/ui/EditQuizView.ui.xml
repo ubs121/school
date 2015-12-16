@@ -1,0 +1,205 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.toolbar {
+			background-color: silver;
+			width: 100%;
+			height: 20px;
+		}
+		
+		.quizId {
+			font-weight: bold;
+		}
+		
+		.status {
+			text-align: right;
+		}
+	</ui:style>
+
+	<g:VerticalPanel>
+		<g:HorizontalPanel height="20px" styleName="{style.toolbar}">
+			<g:HorizontalPanel styleName="{style.quizId}">
+				<g:Label text="Асуултын #: "></g:Label>
+				<g:Label ui:field="quizId" height="20px"></g:Label>
+			</g:HorizontalPanel>
+			<g:Label ui:field="lblStatus" text="" styleName="{style.status}"></g:Label>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel height="20px" styleName="{style.toolbar}">
+			<g:HorizontalPanel>
+				<g:PushButton ui:field="insert_single_choice" height="20px"
+					width="20px" title="Нэг сонголттой асуулт">
+					<g:upFace>
+						<img src="../exampro/insert_single_choice.png" />
+					</g:upFace>
+				</g:PushButton>
+				<g:PushButton ui:field="insert_multi_choice" height="20px"
+					width="20px" title="Олон сонголттой асуулт">
+					<g:upFace>
+						<img src="../exampro/insert_multi_choice.png" />
+					</g:upFace>
+				</g:PushButton>
+				<g:PushButton ui:field="insert_true_false" height="20px"
+					width="20px" title="Үнэн/худал асуулт">
+					<g:upFace>
+						<img src="../exampro/insert_true_false.png" />
+					</g:upFace>
+				</g:PushButton>
+				<g:PushButton ui:field="insert_fillbox" height="20px"
+					width="20px" title="Бөглөх хайрцаг">
+					<g:upFace>
+						<img src="../exampro/insert_fillbox.png" />
+					</g:upFace>
+				</g:PushButton>
+				<g:PushButton ui:field="insert_match" height="20px"
+					width="20px" title="Тааруулах асуулт">
+					<g:upFace>
+						<img src="../exampro/insert_match.png" />
+					</g:upFace>
+				</g:PushButton>
+				<!-- тусгаарлагч -->
+				<g:PushButton ui:field="insert_line" height="20px"
+					width="20px" title="Шулуун оруулах">
+					<g:upFace>
+						<img src="../exampro/insertline.png" />
+					</g:upFace>
+				</g:PushButton>
+				<g:PushButton ui:field="insert_image" height="20px"
+					width="20px" title="Зураг оруулах">
+					<g:upFace>
+						<img src="../exampro/insertimage.png" />
+					</g:upFace>
+				</g:PushButton>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<!-- тусгаарлагч -->
+				<g:Label text=" Түвшин: " />
+				<g:ListBox ui:field="quizLevel" selectedIndex="2">
+					<g:item value="0">Маш хялбар</g:item>
+					<g:item value="1">Хялбар</g:item>
+					<g:item value="2">Ердийн</g:item>
+					<g:item value="3">Хүнд</g:item>
+					<g:item value="4">Маш хүнд</g:item>
+				</g:ListBox>
+				<g:Label text=" Оноо: " />
+				<g:IntegerBox ui:field="quizScore" height="17px" width="40px"></g:IntegerBox>
+				<g:Label text=" Хугацаа: " />
+				<g:IntegerBox ui:field="quizDuration" height="17px"
+					width="40px" />
+			</g:HorizontalPanel>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel styleName="{style.toolbar}">
+
+			<g:ToggleButton ui:field="bold" height="20px" width="20px"
+				title="Зузаан">
+				<g:upFace>
+					<img src="../exampro/bold.png" />
+				</g:upFace>
+			</g:ToggleButton>
+			<g:ToggleButton ui:field="italic" height="20px" width="20px"
+				title="Налуу">
+				<g:upFace>
+					<img src="../exampro/italic.png" />
+				</g:upFace>
+			</g:ToggleButton>
+			<g:ToggleButton ui:field="underline" height="20px"
+				width="20px" title="Доогуур зураас">
+				<g:upFace>
+					<img src="../exampro/underline.png" />
+				</g:upFace>
+			</g:ToggleButton>
+			<g:ListBox ui:field="fonts">
+				<g:item value="Times New Roman">Times New Roman</g:item>
+				<g:item value="Arial">Arial</g:item>
+				<g:item value="Courier New">Courier New</g:item>
+				<g:item value="Georgia">Georgia</g:item>
+				<g:item value="Trebuchet">Trebuchet</g:item>
+				<g:item value="Verdana">Verdana</g:item>
+			</g:ListBox>
+			<g:ListBox ui:field="colors">
+				<g:item value="white">white</g:item>
+				<g:item value="black">black</g:item>
+				<g:item value="red">red</g:item>
+				<g:item value="green">green</g:item>
+				<g:item value="yellow">yellow</g:item>
+				<g:item value="blue">blue</g:item>
+			</g:ListBox>
+			<g:ToggleButton ui:field="stroke" height="20px" width="20px"
+				title="Дундуур зураас">
+				<g:upFace>
+					<img src="../exampro/stroke.png" />
+				</g:upFace>
+			</g:ToggleButton>
+			<g:ToggleButton ui:field="subscript" height="20px"
+				width="20px" title="Зэрэгт">
+				<g:upFace>
+					<img src="../exampro/subscript.png" />
+				</g:upFace>
+			</g:ToggleButton>
+			<g:ToggleButton ui:field="superscript" height="20px"
+				width="20px" title="Индекс">
+				<g:upFace>
+					<img src="../exampro/superscript.png" />
+				</g:upFace>
+			</g:ToggleButton>
+			<g:PushButton ui:field="align_left" height="20px" width="20px"
+				title="Зүүн байрлуулах">
+				<g:upFace>
+					<img src="../exampro/alignleft.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:PushButton ui:field="align_middle" height="20px"
+				width="20px" title="Голлуулах">
+				<g:upFace>
+					<img src="../exampro/aligncenter.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:PushButton ui:field="align_right" height="20px"
+				width="20px" title="Баруун байрлуулах">
+				<g:upFace>
+					<img src="../exampro/alignright.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:PushButton ui:field="order_list" height="20px" width="20px"
+				title="Эрэмбэтэй жагсаалт">
+				<g:upFace>
+					<img src="../exampro/orderlist.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:PushButton ui:field="unorder_list" height="20px"
+				width="20px" title="Эрэмбэгүй жагсаалт">
+				<g:upFace>
+					<img src="../exampro/unorderlist.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:PushButton ui:field="indent_right" height="20px"
+				width="20px" title="Догол ахиулах">
+				<g:upFace>
+					<img src="../exampro/indentright.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:PushButton ui:field="indent_left" height="20px"
+				width="20px" title="Догол хасах">
+				<g:upFace>
+					<img src="../exampro/indentleft.png" />
+				</g:upFace>
+			</g:PushButton>
+
+			<g:PushButton ui:field="remove_formatting" height="20px"
+				width="20px" title="Форматыг арилгах">
+				<g:upFace>
+					<img src="../exampro/removeformatting.png" />
+				</g:upFace>
+			</g:PushButton>
+			<g:ToggleButton ui:field="texthtml" height="20px"
+				width="20px" title="HTML кодыг харах">
+				<g:upFace>
+					<img src="../exampro/texthtml.png" />
+				</g:upFace>
+			</g:ToggleButton>
+
+		</g:HorizontalPanel>
+		<g:RichTextArea ui:field="quizContent" width="100%"
+			height="40em"></g:RichTextArea>
+	</g:VerticalPanel>
+</ui:UiBinder> 

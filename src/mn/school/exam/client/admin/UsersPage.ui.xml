@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		
+	</ui:style>
+	<g:SplitLayoutPanel width="90em" height="50em">
+		<g:west size="156.0">
+			<g:SimplePanel ui:field="leftPanel" />
+		</g:west>
+		<g:center size="100.0">
+			<g:DockLayoutPanel unit="EM" width="100%" height="100%">
+				<g:north size="2.1">
+					<g:HorizontalPanel>
+						<g:TextBox ui:field="txtValue" width="550px" height="17px" />
+						<g:PushButton title="Find" width="25px" height="17px"
+							styleName="gwt-PushButton" ui:field="btnFind">
+							<g:upFace>
+								<img src="images/search.png" />
+							</g:upFace>
+						</g:PushButton>
+						<g:PushButton title="New" width="25px" height="17px"
+							styleName="gwt-PushButton" ui:field="btnNew">
+							<g:upFace>
+								<img src="images/new.png" />
+							</g:upFace>
+						</g:PushButton>
+						<g:PushButton title="Save" width="25px" height="17px"
+							styleName="gwt-PushButton" ui:field="btnSave">
+							<g:upFace>
+								<img src="images/save.png" />
+							</g:upFace>
+						</g:PushButton>
+					</g:HorizontalPanel>
+				</g:north>
+				<g:center size="7.7">
+					<p1:CellTable />
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+
+	</g:SplitLayoutPanel>
+</ui:UiBinder> 

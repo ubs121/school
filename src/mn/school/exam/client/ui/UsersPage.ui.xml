@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		
+	</ui:style>
+	<g:VerticalPanel>
+		<g:HTML>
+			<h2>&bull; Хэрэглэгчид</h2>
+			<hr />
+		</g:HTML>
+		<g:HorizontalSplitPanel width="90em" height="50em"
+			splitPosition="20%">
+			<g:SimplePanel ui:field="leftPanel" />
+			<g:VerticalPanel>
+				<g:HorizontalPanel height="20px">
+					<g:TextBox ui:field="txtValue" width="550px" height="17px"
+						title="Хайх утгаа оруулна уу" />
+
+					<g:PushButton title="Хэрэглэгч хайх" width="25px"
+						height="17px" styleName="gwt-PushButton" ui:field="btnSearch">
+						<g:upFace>
+							<img src="../exampro/search.png" />
+						</g:upFace>
+					</g:PushButton>
+					<g:PushButton title="Шинэ хэрэглэгч нэмэх" width="25px"
+						height="17px" styleName="gwt-PushButton" ui:field="btnNew">
+						<g:upFace>
+							<img src="../exampro/new.png" />
+						</g:upFace>
+					</g:PushButton>
+
+					<c:SimplePager ui:field='pager' />
+					<g:PushButton title="Хэрэглэгч хасах" width="25px"
+						height="17px" styleName="gwt-PushButton" ui:field="btnDelete">
+						<g:upFace>
+							<img src="../exampro/delete.png" />
+						</g:upFace>
+					</g:PushButton>
+				</g:HorizontalPanel>
+				<c:CellTable ui:field="userTable" pageSize='25' />
+			</g:VerticalPanel>
+		</g:HorizontalSplitPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 
